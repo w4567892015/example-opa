@@ -17,7 +17,7 @@ services:
   nginx:
     image: nginx:alpine
     volumes:
-      - ./data/bundle.tar.gz:/usr/share/nginx/html/bundle.tar.gz
+      - ./data:/usr/share/nginx/html
 
   # prometheus:
   #   image: prom/prometheus
