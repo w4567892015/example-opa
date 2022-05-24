@@ -1,0 +1,15 @@
+services:
+  - name: acmecorp
+    url:  http://nginx
+
+bundles:
+  authz:
+    service: acmecorp
+    resource: bundle.tar.gz
+    persist: true
+    polling:
+      min_delay_seconds: 10
+      max_delay_seconds: 20
+
+# status:
+#   prometheus: true
